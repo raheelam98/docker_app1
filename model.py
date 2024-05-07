@@ -6,7 +6,7 @@ from sqlmodel import SQLModel, Field, create_engine, Session
 class Todo(SQLModel, table=True):
     id : Optional[int] = Field(default=None, primary_key=True)
     todo_name : str
-    #is_complete : bool = False
+    is_complete : bool = False
 
 # connecting with database 
 connection_string = str(settings.DATABASE_URL).replace("postgresql", "postgresql+psycopg2")
